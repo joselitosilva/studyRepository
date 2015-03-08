@@ -1,30 +1,68 @@
 #include <stdio.h>
 #include <conio.h>
 
-int soma(int n1, int n2);
+void soma(float n1, float n2);
+void subtracao(float n1, float n2);
 
 int main(void) {
 	
-	printf("Hello World!\n\n");
+	float n1, n2, resultado;
 	
-	int n1, n2;
-	
-	printf("Informe um numero: ");
-	scanf("%d", &n1);
-	
-	printf("Informe um segundo numero: ");
-	scanf("%d", &n2);
-	
-	int resultado = soma(n1, n2);
-	
-	printf("\nSoma dos numeros: %d", resultado);
+	while(1) {
+		
+		printf("--- Calculadora ---");
+		
+		printf("\n\n(1) Soma");
+		printf("\n(2) Subtracao");
+		printf("\n(3) Multiplicao");
+		printf("\n(4) Divisao");
+		printf("\n(0) Sair");
+		printf("\n\nSua opcao: ");
+		int op; scanf("%d", &op);
+		
+		if(op == 0) {
+			
+			printf("\nPrograma encerrado.");
+			exit(1);
+		} else {
+			
+			printf("\n\nInforme um numero: ");
+			scanf("%f", &n1);
+			
+			printf("Informe um segundo numero: ");
+			scanf("%f", &n2);
+			
+			switch(op) {
+				
+				case 1: 
+				    soma(n1, n2);
+				    break;
+				    
+				case 2: 
+				    subtracao(n1, n2);
+				    break;
+					
+				default:
+				    printf("\nOpcao invalida!");
+					break;	
+			}
+		}
+		
+		getch();
+		system("cls");
+	}
 	
 	return 0;
 }
 
-int soma(int n1, int n2) {
+void soma(float n1, float n2) {
 	
-	int soma = n1 + n2;
+	float soma = n1 + n2;
+	printf("Resultado: %2.2f", soma);
+}
+
+void subtracao(float n1, float n2) {
 	
-	return soma;
+	float subtracao = n1 - n2;
+	printf("Resultado: %2.2f", subtracao);
 }
