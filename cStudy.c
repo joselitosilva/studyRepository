@@ -4,6 +4,7 @@
 void soma(float n1, float n2);
 void subtracao(float n1, float n2);
 void multiplicacao(float n1, float n2);
+void divisao(float n1, float n2);
 
 int main(void) {
 	
@@ -45,7 +46,11 @@ int main(void) {
 				    
 				case 3:
 				    multiplicacao(n1, n2);
-					break;    
+					break;
+                    
+                case 3:
+                    divisao(n1, n2);
+                    break;
 					
 				default:
 				    printf("\nOpcao invalida!");
@@ -66,7 +71,7 @@ void soma(float n1, float n2) { //Soma Function
 	printf("Resultado: %2.2f", soma);
 }
 
-void subtracao(float n1, float n2) { //Subtração Function
+void subtracao(float n1, float n2) { //Subtracao Function
 	
 	float subtracao = n1 - n2;
 	printf("Resultado: %2.2f", subtracao);
@@ -76,4 +81,10 @@ void multiplicacao(float n1, float n2) { //Multiplicacao Function
 	
 	float multiplicacao = n1 * n2;
 	printf("Resultado: %2.2f", multiplicacao);
+}
+
+void divisao(float n1, float n2) { //Divisao Function
+    
+    float divisao = n1 / n2;
+    printf("Resultado: %d", divisao);
 }
