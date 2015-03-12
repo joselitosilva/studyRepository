@@ -72,7 +72,7 @@ void subtracao(float n1, float n2) { //Subtração Function
 	printf("Resultado: %2.2f", subtracao);
 }
 
-void multiplicacao(float n1, float n2) {
+void multiplicacao(float n1, float n2) { //Multiplicacao Function
 	
 	float multiplicacao = n1 * n2;
 	printf("Resultado: %2.2f", multiplicacao);
