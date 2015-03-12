@@ -55,7 +55,7 @@ int main(void) {
 	return 0;
 }
 
-void soma(float n1, float n2) {
+void soma(float n1, float n2) { //Soma Function
 	
 	float soma = n1 + n2;
 	printf("Resultado: %2.2f", soma);
